@@ -5,9 +5,9 @@
         v-for="documentation in $static.allDocumentation.edges"
         :key="documentation.node.id"
       >
-        <a :href="documentation.node.path">
+        <g-link :to="documentation.node.path">
           {{ documentation.node.title }}
-        </a>
+        </g-link>
       </li>
     </ul>
   </Layout>
