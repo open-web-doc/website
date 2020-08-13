@@ -8,6 +8,8 @@ module.exports = {
   siteName: "Open Web Doc",
   port: 3000,
   outputDir: "docs",
+  siteUrl: "https://open-web-doc.github.io",
+  pathPrefix: "/website",
   plugins: [
     {
       use: "@gridsome/source-filesystem",
