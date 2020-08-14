@@ -12,6 +12,9 @@
   "devDependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.1",
-    "gridsome-plugin-remark-prismjs-all": "^0.3.5"
+    "darkmode-js": "^1.5.6",
+    "fuse.js": "^6.4.1",
+    "gridsome-plugin-remark-prismjs-all": "^0.3.5",
+    "vuex": "^3.5.1"
   }
 }

@@ -4,6 +4,12 @@
   </Layout>
 </template>
 
+<style>
+h1 {
+  margin-top: 0px;
+}
+</style>
+
 <page-query>
 	query Documentation ($path: String!) {
 		documentation: documentation (path: $path) {
