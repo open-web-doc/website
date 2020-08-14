@@ -68,3 +68,26 @@ l'utilisateur Marie a 31 ans
 l'utilisateur John a 23 ans
 l'utilisateur Diana a 37 ans
 ```
+
+## Support navigateurs
+
+- [Ordinateur](#ordinateur)
+- [Mobile](#mobile)
+
+### Ordinateur
+
+- Chrome : 38
+- Edge : 12
+- Firefox : 13
+- Internet explorer : **no**
+- Opera : 25
+- Safari : 7
+
+### Mobile
+
+- UC Browser for Android : 38
+- Chrome for Android : 38
+- Firefox for Android : 14
+- Opera for Android : 25
+- Safari iOS : 7
+- Samsung Internet : 3

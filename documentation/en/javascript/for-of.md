@@ -68,3 +68,26 @@ user Marie is 31 years old
 user John is 23 years old
 user Diana is 37 years old
 ```
+
+## Browser support
+
+- [Desktop](#desktop)
+- [Mobile](#mobile)
+
+### Desktop
+
+- Chrome: 38
+- Edge: 12
+- Firefox: 13
+- Internet explorer: **no**
+- Opera: 25
+- Safari: 7
+
+### Mobile
+
+- UC Browser for Android: 38
+- Chrome for Android: 38
+- Firefox for Android: 14
+- Opera for Android: 25
+- iOS Safari: 7
+- Samsung Internet: 3
