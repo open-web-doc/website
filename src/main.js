@@ -6,8 +6,12 @@ import "gridsome-plugin-remark-prismjs-all/themes/night-owl.css";
 import Vuex from "vuex";
 import modules from "./modules";
 import Darkmode from "darkmode-js";
-import { start, done } from "nprogress";
+import { start, done, configure } from "nprogress";
 import "nprogress/nprogress.css";
+
+configure({
+  showSpinner: false,
+});
 
 export default function(Vue, { router, appOptions }) {
   Vue.use(Vuex);
@@ -37,9 +41,9 @@ export default function(Vue, { router, appOptions }) {
   });
 
   router.beforeEach((to, from, next) => {
-    start();
-
-    console.log("called");
+    if (process.isClient) {
+      start();
+    }
 
     next();
   });
