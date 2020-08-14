@@ -6,8 +6,10 @@ import "gridsome-plugin-remark-prismjs-all/themes/night-owl.css";
 import Vuex from "vuex";
 import modules from "./modules";
 import Darkmode from "darkmode-js";
+import { start, done } from "nprogress";
+import "nprogress/nprogress.css";
 
-export default function(Vue, { appOptions }) {
+export default function(Vue, { router, appOptions }) {
   Vue.use(Vuex);
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
@@ -33,4 +35,16 @@ export default function(Vue, { appOptions }) {
       toggleDarkmode: (state) => state?.darkmode?.toggle(),
     },
   });
+
+  router.beforeEach((to, from, next) => {
+    start();
+
+    console.log("called");
+
+    next();
+  });
+
+  router.afterEach(() => done());
+
+  router.onError(() => done());
 }
