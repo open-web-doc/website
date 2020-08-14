@@ -1,13 +1,12 @@
 <template>
   <Layout>
-    <h1 class="title">
-      Community driven documentation for the web developpers around the world.
-    </h1>
+    <h1 class="title">Community driven documentation for the web developpers around the world.</h1>
     <input
       type="search"
       v-model="searchTerm"
       @input="search"
       class="search"
+      aria-label="Search"
       placeholder="search"
     />
 
@@ -15,10 +14,7 @@
       <br />
     </div>
 
-    <div
-      v-for="documentation in documentationsMatchingSearch"
-      :key="documentation.id"
-    >
+    <div v-for="documentation in documentationsMatchingSearch" :key="documentation.id">
       <g-link :to="documentation.path">{{ documentation.title }}</g-link>
     </div>
   </Layout>
@@ -51,7 +47,7 @@ export default {
     search() {
       this.documentationsMatchingSearch = this.fuse
         .search(this.searchTerm)
-        .map(function(result) {
+        .map(function (result) {
           return result.item;
         });
     },
@@ -61,7 +57,7 @@ export default {
      * @return Array<Object>
      */
     fillDocumentations() {
-      this.documentations = this.$static.allDocumentation.edges.map(function(
+      this.documentations = this.$static.allDocumentation.edges.map(function (
         documentation
       ) {
         return documentation.node;
