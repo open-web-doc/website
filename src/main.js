@@ -67,6 +67,7 @@ export default function(Vue, { router, appOptions }) {
     locale: "en",
     messages: {
       en: {
+        "404 - resource not found": "404 - resource not found",
         About: "About",
         "Community driven documentation for the web developpers around the world.":
           "Community driven documentation for the web developpers around the world.",
@@ -81,8 +82,10 @@ export default function(Vue, { router, appOptions }) {
           "This being a fact, I wanted to offer an alternative to MDN documentation, with new ideas to make searching information easier. I hope you will like the idea.",
         "Open Web Doc is driven by Github contributions. Like MDN, you can contribute to it since you are logged on Github. Just make a pull request, submit your change or your addition, and it will be reviewed before pushed to our Github hosted documentation website.":
           "Open Web Doc is driven by Github contributions. Like MDN, you can contribute to it since you are logged on Github. Just make a pull request, submit your change or your addition, and it will be reviewed before pushed to our Github hosted documentation website.",
+        "No results found.": "No results found.",
       },
       fr: {
+        "404 - resource not found": "404 - resource introuvable",
         About: "À propos",
         "Community driven documentation for the web developpers around the world.":
           "Documentation dirigé par la communauté pour les développeurs du monde entier.",
@@ -97,6 +100,7 @@ export default function(Vue, { router, appOptions }) {
           "De ce fait, j'ai voulu offrir une alternative à la documentation MDN, avec de nouvelles idées pour rendre l'information plus simple à trouver. J'espère que vous aimerez l'idée.",
         "Open Web Doc is driven by Github contributions. Like MDN, you can contribute to it since you are logged on Github. Just make a pull request, submit your change or your addition, and it will be reviewed before pushed to our Github hosted documentation website.":
           "Open Web Doc est dirigé par les contributions Github. Comme MDN, vous pouvez contribuer du moment que vous êtes connecté à Github. Créez simplement une Pull Request, validez votre changement ou votre ajout, et il sera relu avant d'être poussé sur notre documentation hébergée sur Github.",
+        "No results found.": "Aucun résultat trouvé.",
       },
     },
   });

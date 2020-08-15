@@ -16,7 +16,7 @@
       :placeholder="$t('search')"
     />
 
-    <div v-if="hasMatchingResults">
+    <div v-if="searchedSomething">
       <br />
     </div>
 
@@ -25,6 +25,9 @@
       :key="documentation.id"
     >
       <g-link :to="documentation.path">{{ documentation.title }}</g-link>
+    </div>
+    <div v-if="searchedSomething && !hasMatchingResults">
+      {{ $t("No results found.") }}
     </div>
   </Layout>
 </template>
@@ -53,6 +56,9 @@ export default {
     ...mapGetters(["language"]),
     hasMatchingResults() {
       return this.documentationsMatchingSearch.length > 0;
+    },
+    searchedSomething() {
+      return this.searchTerm.length > 0;
     },
   },
   methods: {

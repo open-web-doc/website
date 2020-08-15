@@ -4,6 +4,40 @@
   </Layout>
 </template>
 
+<script>
+import { mapGetters } from "vuex";
+import "string.prototype.startswith";
+
+export default {
+  computed: {
+    ...mapGetters(["language"]),
+  },
+  methods: {
+    urlLanguageIs(language) {
+      return this.$route.path.startsWith(`/documentation/${language}`);
+    },
+    getUrlWithLanguage(oldLanguage, newLanguage) {
+      return this.$route.path.replace(
+        `/documentation/${oldLanguage}`,
+        `/documentation/${newLanguage}`
+      );
+    },
+    goToUrlWithLanguage(oldLanguage, newLanguage) {
+      this.$router.push({
+        path: this.getUrlWithLanguage(oldLanguage, newLanguage),
+      });
+    },
+  },
+  watch: {
+    language(newValue, oldValue) {
+      if (!this.urlLanguageIs(newValue)) {
+        this.goToUrlWithLanguage(oldValue, newValue);
+      }
+    },
+  },
+};
+</script>
+
 <style>
 h1 {
   margin-top: 0px;
