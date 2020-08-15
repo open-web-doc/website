@@ -74,11 +74,13 @@ yarn develop
 
 You will be able to browse a local version of the web documentation at `http://localhost:3000`.
 
-Translation for non related documentation texts are located in a JSON object on the file [src/main.js](https://github.com/open-web-doc/website/blob/master/src/main.js#L68).
+Translation for non related documentation texts are located in a JSON object on the folder `src/i18n/messages`. For example, English translations are located in `src/i18n/messages/en.js`.
 
 You just have to copy the english counterpart translation for the key, and the value becomes your language translated text.
 
 Make sure to keep the key as it is on the english version, and not change it.
+
+After that, you need to import the new language like done in the file `src/i18n/messages/index.js`.
 
 Then, you can just browse the local website to check the translated text is correctly displayed according to the current selected language (at the top navbar).
 
