@@ -5,9 +5,9 @@ import actions from "./actions";
 import mutations from "./mutations";
 
 export default {
-  modules,
-  state,
-  getters,
-  actions,
-  mutations,
+    modules,
+    state,
+    getters,
+    actions,
+    mutations,
 };

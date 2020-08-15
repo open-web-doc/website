@@ -11,25 +11,25 @@ import store from "./store";
 import i18n from "./i18n";
 
 configure({
-  showSpinner: false,
+    showSpinner: false,
 });
 
 export default function(Vue, { router, appOptions }) {
-  Vue.use(Vuex);
-  Vue.use(VueI18n);
-  // Set default layout as a global component
-  Vue.component("Layout", DefaultLayout);
+    Vue.use(Vuex);
+    Vue.use(VueI18n);
+    // Set default layout as a global component
+    Vue.component("Layout", DefaultLayout);
 
-  appOptions.store = new Vuex.Store(store);
-  appOptions.i18n = new VueI18n(i18n);
+    appOptions.store = new Vuex.Store(store);
+    appOptions.i18n = new VueI18n(i18n);
 
-  router.beforeEach((to, from, next) => {
-    if (process.isClient) {
-      start();
-    }
+    router.beforeEach((to, from, next) => {
+        if (process.isClient) {
+            start();
+        }
 
-    next();
-  });
-  router.afterEach(() => done());
-  router.onError(() => done());
+        next();
+    });
+    router.afterEach(() => done());
+    router.onError(() => done());
 }
