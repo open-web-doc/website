@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://open-web-doc.github.io/website/sitemap.xml
+Host: https://open-web-doc.github.io

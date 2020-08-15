@@ -27,6 +27,18 @@ module.exports = {
         {
             use: "@gridsome/plugin-sitemap",
         },
+        {
+            use: "gridsome-plugin-robots-txt",
+            options: {
+                sitemap: "https://open-web-doc.github.io/website/sitemap.xml",
+                policy: [
+                    {
+                        userAgent: "*",
+                        allow: "/",
+                    },
+                ],
+            },
+        },
     ],
     transformers: {
         remark: {
