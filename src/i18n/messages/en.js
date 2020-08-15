@@ -16,4 +16,5 @@ export default {
         "Open Web Doc is driven by Github contributions. Like MDN, you can contribute to it since you are logged on Github. Just make a pull request, submit your change or your addition, and it will be reviewed before pushed to our Github hosted documentation website.",
     "No results found.": "No results found.",
     Language: "Language",
+    "Propose an improvement": "Propose an improvement",
 };

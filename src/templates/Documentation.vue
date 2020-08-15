@@ -2,7 +2,7 @@
     Layout
         div(v-html="$page.documentation.content")
         div(slot="footer")
-            a(:href="githubEditPage") Propose an improvement
+            a(:href="githubEditPage") {{ $t("Propose an improvement") }}
 </template>
 
 <script>

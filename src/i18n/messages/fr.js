@@ -16,4 +16,5 @@ export default {
         "Open Web Doc est dirigé par les contributions Github. Comme MDN, vous pouvez contribuer du moment que vous êtes connecté à Github. Créez simplement une Pull Request, validez votre changement ou votre ajout, et il sera relu avant d'être poussé sur notre documentation hébergée sur Github.",
     "No results found.": "Aucun résultat trouvé.",
     Language: "Langue",
+    "Propose an improvement": "Proposer une amélioration",
 };
