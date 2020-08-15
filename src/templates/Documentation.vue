@@ -1,7 +1,6 @@
-<template>
-    <Layout>
-        <div v-html="$page.documentation.content"></div>
-    </Layout>
+<template lang="pug">
+    Layout
+        div(v-html="$page.documentation.content")
 </template>
 
 <script>

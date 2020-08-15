@@ -1,7 +1,4 @@
-<template>
-    <Layout>
-        <h1 class="title">
-            {{ $t("404 - resource not found") }}
-        </h1>
-    </Layout>
+<template lang="pug">
+    Layout
+        h1.title {{ $t("404 - resource not found") }}
 </template>

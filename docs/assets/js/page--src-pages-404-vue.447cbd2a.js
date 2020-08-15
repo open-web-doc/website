@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{"7l0S":function(t,s,e){"use strict";e.r(s);var n=e("KHd+"),i=Object(n.a)({},(function(){var t=this.$createElement,s=this._self._c||t;return s("Layout",[s("h1",{staticClass:"title"},[this._v(this._s(this.$t("404 - resource not found")))])])}),[],!1,null,null,null);s.default=i.exports}}]);

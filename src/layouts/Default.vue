@@ -1,42 +1,19 @@
-<template>
-    <div class="layout">
-        <header class="header">
-            <strong>
-                <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-            </strong>
-            <nav class="nav">
-                <select v-model="selectedLang" :aria-label="$t('Language')">
-                    <option
-                        v-for="lang in languages"
-                        :key="lang"
-                        :value="lang"
-                        :selected="lang == language"
-                        >{{ lang | upper }}</option
-                    >
-                </select>
-                <a
-                    href="javascript:;"
-                    class="nav__link darkmode-button"
-                    @click="toggleDarkmode"
-                    >🌓</a
-                >
-            </nav>
-        </header>
-        <slot />
-        <footer class="header">
-            <strong></strong>
-            <nav class="nav">
-                <a
-                    class="nav__link"
-                    href="https://github.com/open-web-doc/website"
-                    >Github</a
-                >
-                <g-link class="nav__link" to="/about/">{{
-                    $t("About")
-                }}</g-link>
-            </nav>
-        </footer>
-    </div>
+<template lang="pug">
+    .layout
+        header.header
+            strong
+                g-link(to='/') {{ $static.metadata.siteName }}
+            nav.nav
+                select(v-model='selectedLang', :aria-label="$t('Language')")
+                    option(v-for='lang in languages', :key='lang', :value='lang', :selected='lang == language') {{ lang | upper }}
+                a.nav__link.darkmode-button(href='javascript:;', @click='toggleDarkmode') 🌓
+        slot
+        footer.header
+            strong
+            nav.nav
+                a.nav__link(href='https://github.com/open-web-doc/website') Github
+                g-link.nav__link(to='/about/')
+                    | {{ $t("About") }}
 </template>
 
 <script>

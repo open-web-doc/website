@@ -1,35 +1,12 @@
-<template>
-    <Layout>
-        <h1 class="title">
-            {{
-                $t(
-                    "Community driven documentation for the web developpers around the world."
-                )
-            }}
-        </h1>
-        <input
-            type="search"
-            v-model="searchTerm"
-            @input="search"
-            class="search"
-            :aria-label="$t('search')"
-            :placeholder="$t('search')"
-        />
-
-        <div v-if="searchedSomething">
+<template lang="pug">
+    Layout
+        h1.title {{ $t("Community driven documentation for the web developpers around the world.") }}
+        input.search(type="search" v-model="searchTerm" @input="search" :aria-label="$t('search')" :placeholder="$t('search')")
+        div(v-if="searchedSomething")
             <br />
-        </div>
-
-        <div
-            v-for="documentation in documentationsMatchingSearch"
-            :key="documentation.id"
-        >
-            <g-link :to="documentation.path">{{ documentation.title }}</g-link>
-        </div>
-        <div v-if="searchedSomething && !hasMatchingResults">
-            {{ $t("No results found.") }}
-        </div>
-    </Layout>
+        div(v-for="documentation in documentationsMatchingSearch" :key="documentation.id")
+            g-link(:to="documentation.path") {{ documentation.title }}
+        div(v-if="searchedSomething && !hasMatchingResults") {{ $t("No results found.") }}
 </template>
 
 <script>

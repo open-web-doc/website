@@ -21,6 +21,9 @@ module.exports = {
                 },
             },
         },
+        {
+            use: "gridsome-plugin-pug",
+        },
     ],
     transformers: {
         remark: {
