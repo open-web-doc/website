@@ -1,5 +1,6 @@
 ---
 title: "Array.isArray()"
+description: "This method checks if an element is an array."
 tags: ["javascript", "array"]
 ---
 

@@ -35,6 +35,17 @@ export default {
       }
     },
   },
+  metaInfo() {
+    return {
+      title: this.$page.documentation.title,
+      meta: [
+        {
+          name: "description",
+          content: this.$page.documentation.description,
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -49,6 +60,7 @@ h1 {
 		documentation: documentation (path: $path) {
 			id,
 			title,
+			description,
 			content
 		}
 	}

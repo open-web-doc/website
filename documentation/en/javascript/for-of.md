@@ -1,5 +1,6 @@
 ---
 title: "For...of loop - Javascript"
+description: "For of loops make it easy to iterate through an array."
 tags: ["javascript", "loop"]
 ---
 

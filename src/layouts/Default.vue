@@ -5,30 +5,22 @@
         <g-link to="/">{{ $static.metadata.siteName }}</g-link>
       </strong>
       <nav class="nav">
-        <select v-model="selectedLang">
+        <select v-model="selectedLang" :aria-label="$t('Language')">
           <option
             v-for="lang in languages"
             :key="lang"
             :value="lang"
             :selected="lang == language"
-            >{{ lang | upper }}</option
-          >
+          >{{ lang | upper }}</option>
         </select>
-        <a
-          href="javascript:;"
-          class="nav__link darkmode-button"
-          @click="toggleDarkmode"
-          >🌓</a
-        >
+        <a href="javascript:;" class="nav__link darkmode-button" @click="toggleDarkmode">🌓</a>
       </nav>
     </header>
     <slot />
     <footer class="header">
       <strong></strong>
       <nav class="nav">
-        <a class="nav__link" href="https://github.com/open-web-doc/website"
-          >Github</a
-        >
+        <a class="nav__link" href="https://github.com/open-web-doc/website">Github</a>
         <g-link class="nav__link" to="/about/">{{ $t("About") }}</g-link>
       </nav>
     </footer>
@@ -55,7 +47,7 @@ export default {
     ...mapActions(["setDarkmode", "toggleDarkmode", "setLanguage"]),
     setLanguages() {
       this.languages = new Set(
-        this.$static.allDocumentation.edges.map(function(documentation) {
+        this.$static.allDocumentation.edges.map(function (documentation) {
           const path = documentation.node.path;
           const matches = path.match(/^\/documentation\/(\w+)/);
 

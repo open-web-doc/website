@@ -2,9 +2,9 @@
   <Layout>
     <h1 class="title">
       {{
-        $t(
-          "Community driven documentation for the web developpers around the world."
-        )
+      $t(
+      "Community driven documentation for the web developpers around the world."
+      )
       }}
     </h1>
     <input
@@ -20,15 +20,10 @@
       <br />
     </div>
 
-    <div
-      v-for="documentation in documentationsMatchingSearch"
-      :key="documentation.id"
-    >
+    <div v-for="documentation in documentationsMatchingSearch" :key="documentation.id">
       <g-link :to="documentation.path">{{ documentation.title }}</g-link>
     </div>
-    <div v-if="searchedSomething && !hasMatchingResults">
-      {{ $t("No results found.") }}
-    </div>
+    <div v-if="searchedSomething && !hasMatchingResults">{{ $t("No results found.") }}</div>
   </Layout>
 </template>
 
@@ -76,7 +71,7 @@ export default {
      * @return Array<Object>
      */
     fillDocumentations() {
-      this.documentations = this.$static.allDocumentation.edges.map(function(
+      this.documentations = this.$static.allDocumentation.edges.map(function (
         documentation
       ) {
         return documentation.node;
@@ -92,7 +87,14 @@ export default {
     },
   },
   metaInfo: {
-    title: "Hello, world!",
+    title: "Home",
+    meta: [
+      {
+        name: "description",
+        content:
+          "Community driven documentation for developpers around the world.",
+      },
+    ],
   },
 };
 </script>

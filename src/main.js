@@ -83,6 +83,7 @@ export default function(Vue, { router, appOptions }) {
         "Open Web Doc is driven by Github contributions. Like MDN, you can contribute to it since you are logged on Github. Just make a pull request, submit your change or your addition, and it will be reviewed before pushed to our Github hosted documentation website.":
           "Open Web Doc is driven by Github contributions. Like MDN, you can contribute to it since you are logged on Github. Just make a pull request, submit your change or your addition, and it will be reviewed before pushed to our Github hosted documentation website.",
         "No results found.": "No results found.",
+        Language: "Language",
       },
       fr: {
         "404 - resource not found": "404 - resource introuvable",
@@ -101,6 +102,7 @@ export default function(Vue, { router, appOptions }) {
         "Open Web Doc is driven by Github contributions. Like MDN, you can contribute to it since you are logged on Github. Just make a pull request, submit your change or your addition, and it will be reviewed before pushed to our Github hosted documentation website.":
           "Open Web Doc est dirigé par les contributions Github. Comme MDN, vous pouvez contribuer du moment que vous êtes connecté à Github. Créez simplement une Pull Request, validez votre changement ou votre ajout, et il sera relu avant d'être poussé sur notre documentation hébergée sur Github.",
         "No results found.": "Aucun résultat trouvé.",
+        Language: "Langue",
       },
     },
   });

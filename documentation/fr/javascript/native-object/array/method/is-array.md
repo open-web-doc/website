@@ -1,5 +1,6 @@
 ---
 title: "Array.isArray()"
+description: "Cet méthode permet de savoir si un élément est un tableau."
 tags: ["javascript", "array"]
 ---
 

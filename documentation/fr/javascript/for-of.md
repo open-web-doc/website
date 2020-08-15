@@ -1,5 +1,6 @@
 ---
 title: "Boucles For...of - Javascript"
+description: "Les boucles for of permettent d'itérer facilement sur un tableau."
 tags: ["javascript", "loop"]
 ---
 
