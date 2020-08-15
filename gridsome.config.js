@@ -24,6 +24,9 @@ module.exports = {
         {
             use: "gridsome-plugin-pug",
         },
+        {
+            use: "@gridsome/plugin-sitemap",
+        },
     ],
     transformers: {
         remark: {
