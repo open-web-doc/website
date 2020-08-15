@@ -1,6 +1,8 @@
 <template lang="pug">
     Layout
         div(v-html="$page.documentation.content")
+        div(slot="footer")
+            a(:href="githubEditPage") Propose an improvement
 </template>
 
 <script>
@@ -10,6 +12,14 @@ import "string.prototype.startswith";
 export default {
     computed: {
         ...mapGetters(["language"]),
+        githubFilePath() {
+            return this.$page.documentation.path.replace(/\/$/, ".md");
+        },
+        githubEditPage() {
+            return `https://github.com/open-web-doc/website/edit/master${
+                this.githubFilePath
+            }`;
+        },
     },
     methods: {
         urlLanguageIs(language) {
@@ -60,7 +70,8 @@ h1 {
 			id,
 			title,
 			description,
-			content
+			content,
+            path
 		}
 	}
 </page-query>

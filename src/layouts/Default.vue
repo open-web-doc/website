@@ -9,7 +9,8 @@
                 a.nav__link.darkmode-button(href='javascript:;', @click='toggleDarkmode') 🌓
         slot
         footer.header
-            strong
+            div
+                slot(name="footer")
             nav.nav
                 a.nav__link(href='https://github.com/open-web-doc/website') Github
                 g-link.nav__link(to='/about/')
