@@ -1,20 +1,29 @@
 <template>
   <Layout>
-    <h1 class="title">Community driven documentation for the web developpers around the world.</h1>
+    <h1 class="title">
+      {{
+        $t(
+          "Community driven documentation for the web developpers around the world."
+        )
+      }}
+    </h1>
     <input
       type="search"
       v-model="searchTerm"
       @input="search"
       class="search"
-      aria-label="Search"
-      placeholder="search"
+      :aria-label="$t('search')"
+      :placeholder="$t('search')"
     />
 
     <div v-if="hasMatchingResults">
       <br />
     </div>
 
-    <div v-for="documentation in documentationsMatchingSearch" :key="documentation.id">
+    <div
+      v-for="documentation in documentationsMatchingSearch"
+      :key="documentation.id"
+    >
       <g-link :to="documentation.path">{{ documentation.title }}</g-link>
     </div>
   </Layout>
@@ -22,6 +31,8 @@
 
 <script>
 import Fuse from "fuse.js";
+import { mapGetters } from "vuex";
+import "string.prototype.startswith";
 
 export default {
   data() {
@@ -39,6 +50,7 @@ export default {
     this.setFuzzySearch();
   },
   computed: {
+    ...mapGetters(["language"]),
     hasMatchingResults() {
       return this.documentationsMatchingSearch.length > 0;
     },
@@ -47,9 +59,10 @@ export default {
     search() {
       this.documentationsMatchingSearch = this.fuse
         .search(this.searchTerm)
-        .map(function (result) {
-          return result.item;
-        });
+        .map((result) => result.item)
+        .filter((item) =>
+          item.path.startsWith(`/documentation/${this.language}`)
+        );
     },
     /**
      * Maps through the Gridsome documentation object, and remove the GraphQL "edges" and "node" keys.
@@ -57,7 +70,7 @@ export default {
      * @return Array<Object>
      */
     fillDocumentations() {
-      this.documentations = this.$static.allDocumentation.edges.map(function (
+      this.documentations = this.$static.allDocumentation.edges.map(function(
         documentation
       ) {
         return documentation.node;

@@ -5,10 +5,15 @@
         <g-link to="/">{{ $static.metadata.siteName }}</g-link>
       </strong>
       <nav class="nav">
-        <a class="nav__link" href="https://github.com/open-web-doc/website"
-          >Github</a
-        >
-        <g-link class="nav__link" to="/about/">About</g-link>
+        <select v-model="selectedLang">
+          <option
+            v-for="lang in languages"
+            :key="lang"
+            :value="lang"
+            :selected="lang == language"
+            >{{ lang | upper }}</option
+          >
+        </select>
         <a
           href="javascript:;"
           class="nav__link darkmode-button"
@@ -18,31 +23,80 @@
       </nav>
     </header>
     <slot />
+    <footer class="header">
+      <strong></strong>
+      <nav class="nav">
+        <a class="nav__link" href="https://github.com/open-web-doc/website"
+          >Github</a
+        >
+        <g-link class="nav__link" to="/about/">{{ $t("About") }}</g-link>
+      </nav>
+    </footer>
   </div>
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   data() {
     return {
       darkmode: null,
+      languages: [],
+      selectedLang: "en",
     };
   },
   async created() {
     await this.setDarkmode();
+    this.setLanguages();
+    this.setSelectedLang();
   },
   methods: {
-    ...mapActions(["setDarkmode", "toggleDarkmode"]),
+    ...mapActions(["setDarkmode", "toggleDarkmode", "setLanguage"]),
+    setLanguages() {
+      this.languages = new Set(
+        this.$static.allDocumentation.edges.map(function(documentation) {
+          const path = documentation.node.path;
+          const matches = path.match(/^\/documentation\/(\w+)/);
+
+          return matches[1];
+        })
+      );
+    },
+    setSelectedLang() {
+      this.selectedLang = this.language;
+      this.$i18n.locale = this.language;
+    },
+  },
+  watch: {
+    async selectedLang() {
+      await this.setLanguage(this.selectedLang);
+      this.$i18n.locale = this.selectedLang;
+    },
+  },
+  computed: {
+    ...mapGetters(["language"]),
+  },
+  filters: {
+    upper(value) {
+      return value.toUpperCase();
+    },
   },
 };
 </script>
 
 <static-query>
-query {
+query metadata {
   metadata {
     siteName
+  }
+
+  allDocumentation {
+    edges {
+      node {
+        path
+      }
+    }
   }
 }
 </static-query>
