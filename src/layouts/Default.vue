@@ -29,6 +29,7 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
+import upper from "../filters/upper";
 
 export default {
   data() {
@@ -70,9 +71,7 @@ export default {
     ...mapGetters(["language"]),
   },
   filters: {
-    upper(value) {
-      return value.toUpperCase();
-    },
+    upper,
   },
 };
 </script>
