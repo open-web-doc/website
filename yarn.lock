@@ -4591,9 +4591,9 @@ gridsome-plugin-robots-txt@^1.0.2:
     generate-robotstxt "^8.0.0"
 
 gridsome-plugin-service-worker@0.2.*:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/gridsome-plugin-service-worker/-/gridsome-plugin-service-worker-0.2.4.tgz#ab3484eb9bdea2d504d8929930540ad0bca4f574"
-  integrity sha512-/USh9oKfU4PY2ve8I8n49+T4DToFQGdh1HIfuR6LPgzwszfCXK3LMi15qh2VaM/NTROS9CRt9VJhtaTtVT8jxQ==
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-service-worker/-/gridsome-plugin-service-worker-0.2.6.tgz#3ebc2d1be3c0327428e9fff05c8bfabcb58f5b15"
+  integrity sha512-JW4hqC220bty2jXYyQSx3CsxlYAxN6vtzROt3VPJJncwPkfaJpzlzkPy3rymbbC9KeNkAi7YvAZy5Dr/7FwF6w==
   dependencies:
     "@babel/core" "7.*"
     "@babel/plugin-transform-runtime" "^7.11.0"
