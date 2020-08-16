@@ -1033,14 +1033,6 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@rollup/plugin-babel@5.*":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@rollup/plugin-babel/-/plugin-babel-5.2.0.tgz#b87556d61ed108b4eaf9d18b5323965adf8d9bee"
-  integrity sha512-CPABsajaKjINgBQ3it+yMnfVO3ibsrMBxRzbUOUw2cL1hsZJ7aogU8mgglQm3S2hHJgjnAmxPz0Rq7DVdmHsTw==
-  dependencies:
-    "@babel/helper-module-imports" "^7.10.4"
-    "@rollup/pluginutils" "^3.1.0"
-
 "@rollup/plugin-commonjs@15.*":
   version "15.0.0"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-commonjs/-/plugin-commonjs-15.0.0.tgz#690d15a9d54ba829db93555bff9b98ff34e08574"
@@ -3691,6 +3683,11 @@ estraverse@^5.2.0:
   resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-5.2.0.tgz#307df42547e6cc7324d3cf03c155d5cdb8c53880"
   integrity sha512-BxbNGGNm0RyRYvUdHpIwv9IWzeM9XClbOxwoATuFdOE7ZE6wHL+HQ5T8hoPM+zHvmKzzsEqhgy0GrQ5X13afiQ==
 
+estree-walker@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-0.6.1.tgz#53049143f40c6eb918b23671d1fe3219f3a1b362"
+  integrity sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWBB2uqykUah5YpQ6epsqC/w==
+
 estree-walker@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-1.0.1.tgz#31bc5d612c96b704106b477e6dd5d8aa138cb700"
@@ -4594,22 +4591,22 @@ gridsome-plugin-robots-txt@^1.0.2:
     generate-robotstxt "^8.0.0"
 
 gridsome-plugin-service-worker@0.2.*:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/gridsome-plugin-service-worker/-/gridsome-plugin-service-worker-0.2.3.tgz#915b0ae5da3e0a07c11ca8494b0a1749e1c2c73c"
-  integrity sha512-Ye3avgFnnqKs63EN/x0Bj5XQOcObQS5IaaeeCLxSvA2S/vsX+BujXQ5b41d+h/n8Rzj/PY+wRzpQ2jg75mOW/g==
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-service-worker/-/gridsome-plugin-service-worker-0.2.4.tgz#ab3484eb9bdea2d504d8929930540ad0bca4f574"
+  integrity sha512-/USh9oKfU4PY2ve8I8n49+T4DToFQGdh1HIfuR6LPgzwszfCXK3LMi15qh2VaM/NTROS9CRt9VJhtaTtVT8jxQ==
   dependencies:
     "@babel/core" "7.*"
     "@babel/plugin-transform-runtime" "^7.11.0"
     "@babel/preset-env" "7.*"
     "@babel/register" "7.*"
     "@babel/runtime" "7.*"
-    "@rollup/plugin-babel" "5.*"
     "@rollup/plugin-commonjs" "15.*"
     "@rollup/plugin-node-resolve" "9.*"
     "@rollup/plugin-replace" "2.*"
     escodegen "2.*"
     fs-extra "9.*"
     rollup "2.*"
+    rollup-plugin-babel "4.*"
     rollup-plugin-terser "7.*"
     to-ast "1.*"
     workbox-core "5.*"
@@ -8428,6 +8425,14 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+rollup-plugin-babel@4.*:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-babel/-/rollup-plugin-babel-4.4.0.tgz#d15bd259466a9d1accbdb2fe2fff17c52d030acb"
+  integrity sha512-Lek/TYp1+7g7I+uMfJnnSJ7YWoD58ajo6Oarhlex7lvUce+RCKRuGRSgztDO3/MF/PuGKmUL5iTHKf208UNszw==
+  dependencies:
+    "@babel/helper-module-imports" "^7.0.0"
+    rollup-pluginutils "^2.8.1"
+
 rollup-plugin-terser@7.*:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/rollup-plugin-terser/-/rollup-plugin-terser-7.0.0.tgz#26b38ada4f0b351cd7cd872ca04c0f8532d4864f"
@@ -8437,6 +8442,13 @@ rollup-plugin-terser@7.*:
     jest-worker "^26.2.1"
     serialize-javascript "^4.0.0"
     terser "^5.0.0"
+
+rollup-pluginutils@^2.8.1:
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/rollup-pluginutils/-/rollup-pluginutils-2.8.2.tgz#72f2af0748b592364dbd3389e600e5a9444a351e"
+  integrity sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==
+  dependencies:
+    estree-walker "^0.6.1"
 
 rollup@2.*:
   version "2.26.3"
