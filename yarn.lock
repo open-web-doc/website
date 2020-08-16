@@ -4594,9 +4594,9 @@ gridsome-plugin-robots-txt@^1.0.2:
     generate-robotstxt "^8.0.0"
 
 gridsome-plugin-service-worker@0.2.*:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/gridsome-plugin-service-worker/-/gridsome-plugin-service-worker-0.2.1.tgz#79a26540ea17784ff9b630d3038df60d0381c9bf"
-  integrity sha512-QEMqbt1/cFViOtuks1ebzczkUSqH5fykqkoZboLEHLAL9ETwGnmhGtn7xp7a1MIgM/GJHBpW7O+l2IQEEHJlYg==
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-service-worker/-/gridsome-plugin-service-worker-0.2.2.tgz#7781922924d0be0ab17ebd736fca3ecdd03e4dac"
+  integrity sha512-9qFmaLbcjlmI6HGibQJqyqHGB9Ny8LczgqeE8TNNp/+UdP3ywgm0tPUiCi0wLvtPUzedhrJuM6+k3DnQLfOijA==
   dependencies:
     "@babel/core" "7.*"
     "@babel/plugin-transform-runtime" "^7.11.0"
@@ -8439,9 +8439,9 @@ rollup-plugin-terser@7.*:
     terser "^5.0.0"
 
 rollup@2.*:
-  version "2.26.2"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.26.2.tgz#de32c2c28a0b5fb843d120e2b3a252a18e7740e9"
-  integrity sha512-dQOms6XRPGHS5Chq7JkkkGXeO72hzWuftB4Rba0rMIT5lThvcEXLTgjrp6+ehhUlsFraOfvcF0Q8dRoQ/X68WQ==
+  version "2.26.3"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.26.3.tgz#502c755872a4590937cfa4e8f7eb99d3bc3c4025"
+  integrity sha512-Mlt39/kL2rA9egcbQbaZV1SNVplGqYYhDDMcGgHPPE0tvM3R4GrB+IEdYy2QtTrdzMQx57ZcqDFf/KWWm8F+uw==
   optionalDependencies:
     fsevents "~2.1.2"
 
