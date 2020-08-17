@@ -12,7 +12,7 @@ Les boucles `for...of` permettent d'itérer sur un `Array` ou un object itérabl
 
 - [Exemples](#exemples)
 - [Points de vigilences](#points-de-vigilences)
-- [Support navigateurs](#support-navigateurs)
+- [Support des plateformes](#support-des-plateformes)
 
 ## Exemples
 
@@ -70,10 +70,11 @@ l'utilisateur John a 23 ans
 l'utilisateur Diana a 37 ans
 ```
 
-## Support navigateurs
+## Support des plateformes
 
 - [Ordinateur](#ordinateur)
 - [Mobile](#mobile)
+- [Serveur](#serveur)
 
 ### Ordinateur
 
@@ -92,3 +93,7 @@ l'utilisateur Diana a 37 ans
 - Opera for Android : 25
 - Safari iOS : 7
 - Samsung Internet : 3
+
+### Serveur
+
+- Node.JS : 0.12

@@ -12,7 +12,7 @@ tags: ["javascript", "loop"]
 
 - [Examples](#examples)
 - [Points of attention](#points-of-attention)
-- [Browser support](#browser-support)
+- [Platform support](#platform-support)
 
 ## Examples
 
@@ -70,10 +70,11 @@ user John is 23 years old
 user Diana is 37 years old
 ```
 
-## Browser support
+## Platform support
 
 - [Desktop](#desktop)
 - [Mobile](#mobile)
+- [Server](#server)
 
 ### Desktop
 
@@ -92,3 +93,7 @@ user Diana is 37 years old
 - Opera for Android: 25
 - iOS Safari: 7
 - Samsung Internet: 3
+
+### Server
+
+- Node.JS: 0.12

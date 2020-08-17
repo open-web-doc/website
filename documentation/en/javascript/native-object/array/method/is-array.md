@@ -14,7 +14,7 @@ Check if an element is of type `Array`.
 - [Arguments](#arguments)
 - [Return value](#return-value)
 - [Examples](#examples)
-- [Browser support](#browser-support)
+- [Platform support](#platform-support)
 
 ## Prototype
 
@@ -75,30 +75,35 @@ if (Array.isArray(variable)) {
 This is not an array.
 ```
 
-## Browser support
+## Platform support
 
 - [Desktop](#desktop)
 - [Mobile](#mobile)
+- [Server](#server)
 
 ### Desktop
 
-- Internet Explorer : 9
-- Edge : 12
-- Firefox : 4
-- Chome : 5
-- Safari : 5
-- Opera : 11.5
-- Opera Mini : all
+- Internet Explorer: 9
+- Edge: 12
+- Firefox: 4
+- Chome: 5
+- Safari: 5
+- Opera: 11.5
+- Opera Mini: **all**
 
 ### Mobile
 
-- iOS Safari : 5
-- Opera mobile : 46
-- Android Browser : 2.1
-- Chrome for Android : 84
-- Firefox for Android : 68
-- UC Browser for Android : 12.12
-- Samsung Internet : 4
-- QQ Browser : 10.4
-- Baidu Browser : 7.12
-- KaiOS Browser : 2.5
+- iOS Safari: 5
+- Opera mobile: 46
+- Android Browser: 2.1
+- Chrome for Android: 84
+- Firefox for Android: 68
+- UC Browser for Android: 12.12
+- Samsung Internet: 4
+- QQ Browser: 10.4
+- Baidu Browser: 7.12
+- KaiOS Browser: 2.5
+
+### Server
+
+- Node.JS: 0.1.100

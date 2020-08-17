@@ -14,7 +14,7 @@ Vérifie si un élément est de type `Array`.
 - [Arguments](#arguments)
 - [Valeur de retour](#valeur-de-retour)
 - [Exemples](#exemples)
-- [Support navigateur](#support-navigateur)
+- [Support des plateformes](#support-des-plateformes)
 
 ## Prototype
 
@@ -75,30 +75,35 @@ if (Array.isArray(variable)) {
 Ce n'est pas un tableau.
 ```
 
-## Support navigateur
+## Support des plateformes
 
 - [Ordinateur](#ordinateur)
 - [Mobile](#mobile)
+- [Serveur](#serveur)
 
 ### Ordinateur
 
-- Internet Explorer: 9
-- Edge: 12
-- Firefox: 4
-- Chome: 5
-- Safari: 5
-- Opera: 11.5
-- Opera Mini: all
+- Internet Explorer : 9
+- Edge : 12
+- Firefox : 4
+- Chome : 5
+- Safari : 5
+- Opera : 11.5
+- Opera Mini : **all**
 
 ### Mobile
 
-- iOS Safari: 5
-- Opera mobile: 46
-- Android Browser: 2.1
-- Chrome pour Android: 84
-- Firefox pour Android: 68
-- UC Browser pour Android: 12.12
-- Samsung Internet: 4
-- QQ Browser: 10.4
-- Baidu Browser: 7.12
-- KaiOS Browser: 2.5
+- iOS Safari : 5
+- Opera mobile : 46
+- Android Browser : 2.1
+- Chrome pour Android : 84
+- Firefox pour Android : 68
+- UC Browser pour Android : 12.12
+- Samsung Internet : 4
+- QQ Browser : 10.4
+- Baidu Browser : 7.12
+- KaiOS Browser : 2.5
+
+### Serveur
+
+- Node.JS : 0.1.00
