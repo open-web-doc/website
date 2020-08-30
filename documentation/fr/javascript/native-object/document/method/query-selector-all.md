@@ -78,7 +78,7 @@ Nom du tag de l'élément: BUTTON.
 
 ### Itérer sur les éléments en utilisant une boucle for
 
-Itérer à travers un NodeList n'est pas possible avec une boucle for classique. Dans cet exemple, nous allons convertir le NodeList en Array, afin de pouvoir boucler dessus en utilisant une boucle [for...of](/documentation/fr/javascript/for-of).
+Itérer à travers un NodeList n'est pas possible avec une boucle for classique. Dans cet exemple, nous allons convertir le NodeList en Array, afin de pouvoir boucler dessus en utilisant une boucle `for...of`.
 
 ```javascript
 let elements = null;

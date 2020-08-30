@@ -78,7 +78,7 @@ Element tag name: BUTTON.
 
 ### Itering on elements using a for loop
 
-Iterating through a NodeList is impossible with a classic for loop. In this example, we will convert the NodeList into an Array, to be able to loop through it using a [for...of](/documentation/en/javascript/for-of) loop.
+Iterating through a NodeList is impossible with a classic for loop. In this example, we will convert the NodeList into an Array, to be able to loop through it using a `for...of` loop.
 
 ```javascript
 let elements = null;
